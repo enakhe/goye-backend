@@ -3,13 +3,9 @@
   "version": "1.0.0",
   "main": "server.ts",
   "scripts": {
-    "server": "nodemon server.ts",
-    "dev": "concurrently \"npm run server\"",
-    "build": "rimraf dist && tsc",
-    "ts.check": "tsc --project tsconfig.json",
-    "add-build": "git add dist",
-    "test": "jest",
-    "pre-commit": "npm run ts.check && npm run build && npm run add-build"
+    "dev": "ts-node server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js"
   },
   "keywords": [],
   "author": "",
@@ -32,6 +28,7 @@
     "@types/express": "^5.0.3",
     "concurrently": "^9.2.0",
     "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
   }
 }
